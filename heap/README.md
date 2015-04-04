@@ -15,12 +15,15 @@ Implementation of heap in C++ and Haskell.
 ### Run
 
 * Load `ghci`
+
 `$ ghci`
 
 * Load `heapsort.hs` module
+
 `Prelude> :l heapsort.hs`
 
 * Call heapsort on a list
+
 `*Main> heapsort <list>`
 
 ## To Do
