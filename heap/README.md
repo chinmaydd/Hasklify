@@ -22,3 +22,7 @@ Implementation of heap in C++ and Haskell.
 
 * Call heapsort on a list
 `*Main> heapsort <list>`
+
+## To Do
+
+Try to understand how the Haskell heap is implemented internally.
