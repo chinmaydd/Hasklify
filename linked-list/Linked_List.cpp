@@ -46,7 +46,7 @@ void delete_node()
 	int flag = check();
 	if(flag == 0)
 	{
-		cout << "\nThe linked list is empty. Nothing to delete.\n";
+		// cout << "\nThe linked list is empty. Nothing to delete.\n";
 		return;
 	}
 	else
@@ -59,7 +59,7 @@ void delete_node()
 			if(current -> next == NULL)
 			{
 				prev -> next = NULL;
-				cout << "\nElement Deleted.\n";
+				// cout << "\nElement Deleted.\n";
 				free(current);
 				return;
 			}
@@ -77,7 +77,7 @@ void show()
 
 	if(flag == 0)
 	{
-		cout << "\nLinked list is empty. Nothing to show.\n";
+		// cout << "\nLinked list is empty. Nothing to show.\n";
 		return;
 	}
 
@@ -87,7 +87,7 @@ void show()
 		cout<<" -> ";
 		current = current -> next;
 	}
-	cout << "X";
+	cout << "X\n";
 	return;
 }
 
@@ -95,39 +95,34 @@ int main()
 {	
 	head = NULL;
 	int choice;
-	char inp = 'y';
+	int noo;
 
-	while(inp == 'y')
+	cin>>noo;
+
+	while(noo--)
 	{
-		cout << "\n\nPlease enter one of the choices below:\n";
-		cout << "1. Insert Element.\n";
-		cout << "2. Delete the last element of the linked list.\n";
-		cout << "3. Display the linked list.\n";
-
+		// cout << "\n\nPlease enter one of the choices below:\n";
+		// cout << "1. Insert Element.\n";
+		// cout << "2. Delete the last element of the linked list.\n";
+		// cout << "3. Display the linked list.\n";
 		cin>>choice;
 
 		switch(choice)
 		{
-			case 1: cout << "\nEnter the value of the element you want to insert:\n";
+			case 1:
 					int val;
 					cin >> val;
 					add_node(val);
-					cout << "\nThe value has been added to the linked list.\n";
 					break;
 
-			case 2: cout << "\nDeleting the last element of the linked list:\n";
+			case 2: 
 					delete_node();
 					break;
 
-			case 3: cout << "\nDisplaying the linked list starting from the head:\n";
+			case 3: 
 					show();
 					break;
-
-			default: cout << "\nPlease enter a valid choice\n";
-					 break;
 		}
-		cout << "\nDo you want to perform more operations? [y/n]: ";
-		cin >> inp;
 	}
 	return 0;
 }

@@ -12,8 +12,4 @@ Implementation of Linked List in C++ and Haskell.
 
 ## Haskell
 
-`$ ghci`
-`> :load Linked_List.hs`
-
-To implement appending to a linked list, please create a temporary variable and assign the new linked list to it. Then assign the temporary variable to the original list.
-
+`$ runhaskell Linked_List_Haskell.hs`
