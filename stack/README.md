@@ -11,3 +11,10 @@ Implementation of stack in C++ and Haskell.
 `$ ./stack`
 
 ## Haskell
+
+### Run
+
+* Run `Stack.hs` module
+
+`Prelude> runhaskell Stack.hs`
+
