@@ -42,6 +42,18 @@ void buildHeap(int *arr, int size)
 		maxHeapify(arr, i, size);
 }
 
+void heapSort(int *arr, int size)
+{
+	int length = size;
+	buildHeap(arr, size);
+	for (int i = length; i >= 2; i--)
+	{
+		swap(arr[1], arr[i]);
+		size -= 1;
+		maxHeapify(arr, 1, size);
+	}
+}
+
 int main()
 {
 	int size, arr[100000];
@@ -53,7 +65,7 @@ int main()
 	for (int i = 1; i <= size; i++)
 		cin >> arr[i];
 
-	buildHeap(arr, size);
+	heapSort(arr, size);
 	display(arr, size);
 
 	return 0;

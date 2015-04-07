@@ -4,10 +4,28 @@ Implementation of heap in C++ and Haskell.
 
 ### Compile
 
-`$ g++ -o heap heap.cpp`
+`$ g++ -o heapsort heapsort.cpp`
 
 ### Run
 
-`$ ./heap`
+`$ ./heapsort`
 
 ## Haskell
+
+### Run
+
+* Load `ghci`
+
+`$ ghci`
+
+* Load `heapsort.hs` module
+
+`Prelude> :l heapsort.hs`
+
+* Call heapsort on a list
+
+`*Main> heapsort <list>`
+
+## To Do
+
+Try to understand how the Haskell heap is implemented internally.
