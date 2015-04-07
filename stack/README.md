@@ -1,4 +1,4 @@
-Implementation of stack in C++ and Haskell.
+Implementation of stack in C++ and Haskell
 
 ## C++
 
@@ -11,3 +11,19 @@ Implementation of stack in C++ and Haskell.
 `$ ./stack`
 
 ## Haskell
+
+### Run
+
+* Load `ghci`
+
+`$ ghci`
+
+* Run `Stack.hs` module
+
+`Prelude> runHaskell Stack.hs`
+
+
+
+
+
+
