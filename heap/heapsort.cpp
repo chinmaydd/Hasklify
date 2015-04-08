@@ -1,7 +1,8 @@
+/* C++ program to perform heapsort */
 #include <bits/stdc++.h>
 using namespace std;
 
-
+/* Display the given array */
 void display(int *arr, int size)
 {
 	for (int i = 1; i <= size; i++)
@@ -9,16 +10,19 @@ void display(int *arr, int size)
 	cout << "\n";
 }
 
+/* Return left child of given node */
 int leftChild(int p)
 {
 	return (p * 2);
 }
 
+/* Return right child of given node */
 int rightChild(int p)
 {
 	return (p * 2 + 1);
 }
 
+/* Perform max heapification at given node */
 void maxHeapify(int * arr, int i, int size)
 {
 	int largest = i;
@@ -36,12 +40,14 @@ void maxHeapify(int * arr, int i, int size)
 	}
 }
 
+/* Build the given array into heap */
 void buildHeap(int *arr, int size)
 {
 	for (int i = floor(size / 2); i >= 1; i--)
 		maxHeapify(arr, i, size);
 }
 
+/* Sort the given array */
 void heapSort(int *arr, int size)
 {
 	int length = size;
@@ -54,6 +60,7 @@ void heapSort(int *arr, int size)
 	}
 }
 
+/* Begin main */
 int main()
 {
 	int size, arr[100000];
@@ -70,3 +77,4 @@ int main()
 
 	return 0;
 }
+/* End main */
