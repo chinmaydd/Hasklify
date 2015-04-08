@@ -15,14 +15,14 @@ showStack :: Stack -> IO() --showStack function takes stack type as input parame
 showStack [] = error "Stack empty"
 showStack s = print  s
 
-main=do
+main = do
 	
 	putStrLn "Enter value to be pushed"
 	str<-getLine -- get input
-	let n=read str::Int --typecast input to int type
-	let s=[34,1,23,90] --declaration of list
-	let s1=push n s --lists in haskell are immutable and therefore,a temporary list has been used to make permanent changes
-	let s=s1
+	let n = read str::Int --typecast input to int type
+	let s = [34,1,23,90] --declaration of list
+	let s1 = push n s --lists in haskell are immutable and therefore,a temporary list has been used to make permanent changes
+	let s = s1
 	putStrLn "Stack Status:"
 	showStack s
 	let s1=pop s
