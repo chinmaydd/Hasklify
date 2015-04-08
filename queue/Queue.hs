@@ -8,11 +8,11 @@ enqueue :: Int -> Queue -> Queue                     --Function prototype ie- it
 enqueue c s = s ++ [c]                               --The operarator ++ adds a list the end of another list
 
 main=do
-	putStrLn"Enter the element to push"
-        str<-getLine
-	let n=read str::Int
-	let s=[1,2,3,4,5,6]
-	let s1=enqueue n s
+	putStrLn"Enter the element to push"          
+        str<-getLine                                 -- get input
+	let n=read str::Int                          --typecast input to int type
+	let s=[1,2,3,4,5,6]                          --declaration and initialization of list
+	let s1=enqueue n s                           --lists in haskell are immutable and therefore,a temporary list has been used to make permanent changes
 	let s=s1
         putStrLn"The queue after enqueue is:"
 	putStrLn $ show s
