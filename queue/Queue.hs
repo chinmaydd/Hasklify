@@ -1,22 +1,22 @@
 --Haskell Implementation of Queue 
-type Queue = [Int]
+type Queue = [Int]                                   --assigning the type [Int] to 'Queue' so they are interchangable
 
-pop :: Queue -> Queue
-pop s = tail s
+dequeue :: Queue -> Queue                            --Function prototype ie- it takes in type Queue and return type Queue      
+dequeue s = tail s                                   --Definition of the function. 'tail' returns all elements except the first one     
 
-push :: Int -> Queue -> Queue
-push c s = s ++ [c]  
+enqueue :: Int -> Queue -> Queue                     --Function prototype ie- it takes in type Int and type Queue and return type Queue
+enqueue c s = s ++ [c]                               --The operarator ++ adds a list the end of another list
 
 main=do
 	putStrLn"Enter the element to push"
         str<-getLine
 	let n=read str::Int
 	let s=[1,2,3,4,5,6]
-	let s1=push n s
+	let s1=enqueue n s
 	let s=s1
-        putStrLn"The queue after pushing is:"
+        putStrLn"The queue after enqueue is:"
 	putStrLn $ show s
-	let s1=pop s
+	let s1=dequeue s
 	let s=s1
-        putStrLn"The queue after poping:"
+        putStrLn"The queue after dequeue:"
 	putStrLn $ show s
