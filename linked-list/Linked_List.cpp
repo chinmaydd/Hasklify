@@ -2,13 +2,13 @@
 # include <cstdlib>
 using namespace std;
 
-struct node
-{
+struct node                   // Structure to hold a node of the linked list. It has two data fields, value and *next.
+{							  // Value is intrinsic to the node. *next is a pointer to the next node in the sequence.
 	int value;
 	struct node * next;
 }*head;
 
-void add_node(int val)
+void add_node(int val)       // Function to insert a node at the end of the linked list.
 {
 	node *temp = new node;
 	temp -> value = val;
@@ -34,19 +34,19 @@ void add_node(int val)
 	}
 }
 
-int check()
+int check()                // Function to check if the linked list is empty or not.
 {
 	if(head == NULL)
 		return 0;
 	return 1;
 }
 
-void delete_node()
+void delete_node()        // Function to delete the last element of the linked list. This operation was chosen to compute the worst case complexity of the delete operation.
 {
 	int flag = check();
 	if(flag == 0)
 	{
-		// cout << "\nThe linked list is empty. Nothing to delete.\n";
+		cout << "\nThe linked list is empty. Nothing to delete.\n";
 		return;
 	}
 	else
@@ -59,7 +59,7 @@ void delete_node()
 			if(current -> next == NULL)
 			{
 				prev -> next = NULL;
-				// cout << "\nElement Deleted.\n";
+				cout << "\nElement Deleted.\n";
 				free(current);
 				return;
 			}
@@ -69,7 +69,7 @@ void delete_node()
 	}
 }
 
-void show()
+void show()                    // Function to display the entire linked list. The pointer traverses through the entire the linked list and displays the value stored in each node.
 {
 	node *current = head;
 
@@ -77,7 +77,7 @@ void show()
 
 	if(flag == 0)
 	{
-		// cout << "\nLinked list is empty. Nothing to show.\n";
+		cout << "\nLinked list is empty. Nothing to show.\n";
 		return;
 	}
 
@@ -95,16 +95,16 @@ int main()
 {	
 	head = NULL;
 	int choice;
-	int noo;
+	int operations;
 
-	cin>>noo;
+	cin>>operations;
 
-	while(noo--)
+	while(operations--)
 	{
-		// cout << "\n\nPlease enter one of the choices below:\n";
-		// cout << "1. Insert Element.\n";
-		// cout << "2. Delete the last element of the linked list.\n";
-		// cout << "3. Display the linked list.\n";
+		cout << "\n\nPlease enter one of the choices below:\n";
+		cout << "1. Insert Element.\n";
+		cout << "2. Delete the last element of the linked list.\n";
+		cout << "3. Display the linked list.\n";
 		cin>>choice;
 
 		switch(choice)
