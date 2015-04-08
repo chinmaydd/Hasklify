@@ -4,9 +4,9 @@
 
 using namespace std;
 
-#define max 5
+#define max 50
 
-class stack
+class stack //class to hold required data members and member functions
 {
    int top;
    int value;
@@ -21,7 +21,7 @@ class stack
    }
 };
 
-void stack :: push()
+void stack :: push()   //function to push an element into stack
 {
   cout<<"Enter value to be pushed\n";
   cin>>value;
@@ -31,7 +31,7 @@ void stack :: push()
    A[++top]=value;
 }
 
-void stack :: pop()
+void stack :: pop() //function to pop an element from the stack
 {
   if(top==-1)
    cout<<"Stack underflow\n";
@@ -42,7 +42,7 @@ void stack :: pop()
   }
 }
 
-void stack :: display()
+void stack :: display() //function to display stack status
 {
   if(top==-1)
    cout<<"Stack underflow\n";
@@ -56,7 +56,7 @@ void stack :: display()
 
 int main()
 {
-  stack S;
+  stack S; //object of class stack
   int ch;
   do
   {
