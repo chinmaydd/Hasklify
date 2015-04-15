@@ -5,7 +5,7 @@ dequeue :: Queue -> Queue                            --Function prototype ie- it
 dequeue s = tail s                                   --Definition of the function. 'tail' returns all elements except the first one     
 
 enqueue :: Int -> Queue -> Queue                     --Function prototype ie- it takes in type Int and type Queue and return type Queue
-enqueue c s = s ++ [c]                               --The operarator ++ adds a list the end of another list
+enqueue c s = s ++ [c]                               --The operator ++ adds a list the end of another list
 
 main=do
 	putStrLn"Enter the element to push"          
