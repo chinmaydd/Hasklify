@@ -6,7 +6,7 @@ import Data.Graph.Inductive.Internal.Heap(
 build :: Ord a => [(a,b)] -> Heap a b  -- build takes a list of (a,b) pairs, returns a heap
 build = foldr insert Empty  -- 
 
--- Max heapify
+-- Min heapify
 toList :: Ord a => Heap a b -> [(a,b)]
 toList Empty = []
 toList h = x:toList r
